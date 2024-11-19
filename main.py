@@ -5,7 +5,7 @@ import time
 import html
 import re
 
-assistant_avatar_url = "https://raw.githubusercontent.com/couchbaselabs/Capellagence/refs/heads/master/capellagence.svg?token=GHSAT0AAAAAAC2UFBROCB2SQBBG5G37PXPGZZ42RVQ"
+assistant_avatar_url = "https://raw.githubusercontent.com/couchbaselabs/Capellagence/refs/heads/master/capellagence.png?token=GHSAT0AAAAAAC2W75PVGA6NZGKDILWKFRMGZZ4265Q"
 user_avatar_url = "https://www.w3schools.com/w3images/avatar2.png"
 couchbase_logo = "https://emoji.slack-edge.com/T024FJS4M/couchbase/4a361e948b15ed91.png"
 
