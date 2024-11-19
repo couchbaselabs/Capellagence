@@ -5,10 +5,9 @@
     "Good morning": "Good morning! How can I help you today?",
     "Good afternoon": "Good afternoon! How can I help you today?",
     "Good evening": "Good evening! How can I help you today?",
-    "Please book a family vacation to Kauai for Jan 15 to Jan 25. I would like to use loyalty points wherever possible. Please also arrange some activities for the family": "Of course! Let's start with travel options. I'm assuming you, your wife Jan and children Alex and Blake will all need the same itinerary, and that you're departing from your home airport Houston Hobby. \n Here's a good itinerary that works for your plans.",
-    "I am planning a vacation": "Great, where would you like to go?",
-    "Book it": "![Confirmation Image](https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg) Confirmations on their way to your email. Do you need a car?",
-    "Yes, minivan please": "![Car Image](https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg) No problem! You are Executive Gold with Hertz, here's a good option: Ford Transit Wagon.",
-    "Sounds great, please book them!": "Done, confirmations and e-tickets are on their way to your email. [![Video Tour](https://img.youtube.com/vi/YaTV7vB1P-k/0.jpg)](https://www.youtube.com/watch?v=YaTV7vB1P-k)",
-    "Sure, you can use photos saved to my vacation folder on iCloud.": "Will do! Also, I've created a Spotify playlist for your trip. [![Spotify Playlist](https://example.com/spotify.png)](https://open.spotify.com/playlist/your_playlist_id)"
+    "Please book a family vacation to Kauai": "I've found some great options for your family vacation! Here's a preview of the resort:\n<img src='https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg' alt='Kauai Resort' style='max-width:100%; border-radius:10px; margin:10px 0;'>\nWould you like to proceed with the booking?",
+    "Show me the hotel video": "Here's a video tour of the resort:\n<iframe width='560' height='315' src='https://www.youtube.com/embed/dQw4w9WgXcQ' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='border-radius:10px; margin:10px 0;'></iframe>",
+    "Book it": "Great choice! Here's your confirmation:\n<img src='https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg' alt='Confirmation' style='max-width:100%; border-radius:10px; margin:10px 0;'>",
+    "Show me the car options": "Here's our available minivan:\n<img src='https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg' alt='Minivan' style='max-width:100%; border-radius:10px; margin:10px 0;'>\nWould you like to reserve this vehicle?",
+    "Confirm booking": "Perfect! Here's your complete itinerary and a welcome video:\n<img src='https://example.com/itinerary.jpg' alt='Itinerary' style='max-width:100%; border-radius:10px; margin:10px 0;'>\n<iframe width='560' height='315' src='https://www.youtube.com/embed/dQw4w9WgXcQ' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='border-radius:10px; margin:10px 0;'></iframe>"
 }
