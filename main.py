@@ -61,6 +61,11 @@ def display_message(text, is_user=False, avatar_url=None):
         """
     st.write(container_html, unsafe_allow_html=True)
 
+def normalize_text(text):
+    # Replace '\n' with a single space
+    text = re.sub(r'\s*\n\s*', ' ', text)
+    return text.lower().strip()
+
 # Load predefined responses from a config file
 def load_responses():
     with open('responses.json', 'r') as file:
@@ -80,7 +85,7 @@ st.markdown(f"""
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-display_message("Hey Kush!\n How can I help you?", is_user=False, avatar_url=assistant_avatar_url)
+display_message("Hello! How can I assist you today?", is_user=False, avatar_url=assistant_avatar_url)
 
 # Display chat messages
 for message in st.session_state.messages:
@@ -105,7 +110,14 @@ if question := st.chat_input("Ask a question"):
         display_message(thinking_message, is_user=False, avatar_url=thinking_avatar_url)
 
     # Get response from predefined responses
-    response = responses.get(question, "I'm not sure how to respond to that.")
+    normalized_question = normalize_text(question)
+    response = None
+    for key in responses:
+      if normalize_text(key) == normalized_question:
+          response = responses[key]
+          break
+    if response is None:
+      response = "I'm not sure how to respond to that."
 
     # Calculate delay duration based on response length
     # For example, 0.05 seconds per character

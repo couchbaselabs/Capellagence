@@ -1,9 +1,14 @@
 {
     "Hey": "Hello! How can I help you today?",
+    "Hello": "Hello! How can I help you today?",
+    "Hi": "Hello! How can I help you today?",
+    "Good morning": "Good morning! How can I help you today?",
+    "Good afternoon": "Good afternoon! How can I help you today?",
+    "Good evening": "Good evening! How can I help you today?",
+    "Please book a family vacation to Kauai for Jan 15 to Jan 25. I would like to use loyalty points wherever possible. Please also arrange some activities for the family": "Of course! Let's start with travel options. I'm assuming you, your wife Jan and children Alex anc Blake will all need the same itinerary, and that you're departing from your home airport Houston Hobby. \n Here's a good itinerary that works for your plans ",
     "I am planning a vacation": "Great, where would you like to go?",
     "Book it": "![Confirmation Image](https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg) Confirmations on their way to your email. Do you need a car?",
     "Yes, minivan please": "![Car Image](https://example.com/car.png) No problem! You are Executive Gold with Hertz, here's a good option: Ford Transit Wagon.",
     "Sounds great, please book them!": "Done, confirmations and e-tickets are on their way to your email. [![Video Tour](https://www.youtube.com/watch?v=YaTV7vB1P-k&pp=ygUFaG90ZWw%3D)](https://www.youtube.com/watch?v=YaTV7vB1P-k&pp=ygUFaG90ZWw%3D)",
-    "Sure, you can use photos saved to my vacation folder on iCloud.": "Will do! Also, I've created a Spotify playlist for your trip. [![Spotify Playlist](https://example.com/spotify.png)](https://open.spotify.com/playlist/your_playlist_id)",
-    "Please book a family vacation to Kauai for Jan 15 to Jan 25. I would like to use loyalty points wherever possible. Please also arrange some activities for the family": "Of course! Let's start with travel options. I'm assuming you, your wife Jan and children Alex anc Blake will all need the same itinerary, and that you're departing from your home airport Houston Hobby. Here's a good itinerary that works for your plans"
+    "Sure, you can use photos saved to my vacation folder on iCloud.": "Will do! Also, I've created a Spotify playlist for your trip. [![Spotify Playlist](https://example.com/spotify.png)](https://open.spotify.com/playlist/your_playlist_id)"
 }
