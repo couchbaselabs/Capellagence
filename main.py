@@ -15,7 +15,8 @@ st.markdown(f"""
 /* Sticky header */
 .header {{
     position: fixed;
-    top: 0;
+    height: 55px;
+    top: 5px;
     width: 100%;
     z-index: 9999999;
     display: flex;
@@ -23,11 +24,6 @@ st.markdown(f"""
     padding: 10px;
 }}
 
-/* Chat container to add margin-top equal to header height */
-.chat-container {{
-    margin-top: 80px; /* Adjust this value if header height changes */
-    padding: 10px;
-}}
 
 /* Hide the Streamlit header and footer */
 #MainMenu {{ visibility: hidden; }}
