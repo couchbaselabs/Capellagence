@@ -5,9 +5,36 @@ import time
 import html
 import re
 
-assistant_avatar_url = "https://raw.githubusercontent.com/couchbaselabs/Capellagence/refs/heads/master/capellagence.png?token=GHSAT0AAAAAAC2W75PVGA6NZGKDILWKFRMGZZ4265Q"
+assistant_avatar_url = "https://raw.githubusercontent.com/couchbaselabs/Capellagence/refs/heads/master/capellagence.png"
 user_avatar_url = "https://www.w3schools.com/w3images/avatar2.png"
 couchbase_logo = "https://emoji.slack-edge.com/T024FJS4M/couchbase/4a361e948b15ed91.png"
+
+# Custom CSS for sticky header and chat container
+st.markdown(f"""
+<style>
+/* Sticky header */
+.header {{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}}
+
+/* Chat container to add margin-top equal to header height */
+.chat-container {{
+    margin-top: 80px; /* Adjust this value if header height changes */
+    padding: 10px;
+}}
+
+/* Hide the Streamlit header and footer */
+#MainMenu {{ visibility: hidden; }}
+footer {{ visibility: hidden; }}
+
+</style>
+""", unsafe_allow_html=True)
 
 
 def format_message(text):
@@ -62,8 +89,7 @@ def display_message(text, is_user=False, avatar_url=None):
     st.write(container_html, unsafe_allow_html=True)
 
 def normalize_text(text):
-    # Replace '\n' with a single space
-    text = re.sub(r'\s*\n\s*', ' ', text)
+    text = re.sub(r'(?<!\s)\n(?!\s)', ' ', text)
     return text.lower().strip()
 
 # Load predefined responses from a config file
@@ -76,11 +102,12 @@ responses = load_responses()
 
 # Display the title with the Couchbase logo
 st.markdown(f"""
-<div style="display:flex; align-items:center;">
+<div class="header">
     <img src="{couchbase_logo}" alt="Couchbase Logo" style="width:40px; height:40px; margin-right:10px;" />
     <h1 style="margin:0;">Capellagence</h1>
 </div>
 """, unsafe_allow_html=True)
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
