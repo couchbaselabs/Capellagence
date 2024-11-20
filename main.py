@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import time
-
 import html
 import re
 
@@ -24,14 +23,29 @@ st.markdown(f"""
     padding: 10px;
 }}
 
-
 /* Hide the Streamlit header and footer */
 #MainMenu {{ visibility: hidden; }}
 footer {{ visibility: hidden; }}
 
+/* Custom styling for chat messages */
+.chat-message {{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}}
+
+.chat-message ul {{
+    margin: 0;
+    padding-left: 20px;
+}}
+
+.chat-message li {{
+    font-family: Arial, sans-serif !important;
+    font-size: 14px !important;
+}}
+
 </style>
 """, unsafe_allow_html=True)
-
 
 def display_message(text, is_user=False, avatar_url=None):
     """Displays a chat message with custom styling and avatar."""
@@ -47,7 +61,7 @@ def display_message(text, is_user=False, avatar_url=None):
     if is_user:
         container_html = f"""
         <div style="display:flex; align-items:flex-start; justify-content:{alignment}; margin-bottom:10px;">
-            <div style="background:{message_bg_color}; color:white; border-radius:20px; padding:10px; {margin}:5px; max-width:90%; font-size:14px; line-height:1.2; word-wrap:break-word;">
+            <div style="background:{message_bg_color}; color:white; border-radius:20px; padding:10px; {margin}:5px; max-width:90%;" class="chat-message">
                 {formatted_text}
             </div>
         </div>
@@ -57,7 +71,7 @@ def display_message(text, is_user=False, avatar_url=None):
         container_html = f"""
         <div style="display:flex; align-items:flex-start; justify-content:{alignment}; margin-bottom:10px;">
             <img src="{avatar_url}" alt="avatar" style="{avatar_style}; margin-right:5px;" />
-            <div style="background:{message_bg_color}; color:white; border-radius:20px; padding:10px; max-width:90%; font-size:14px; line-height:1.2; word-wrap:break-word;">
+            <div style="background:{message_bg_color}; color:white; border-radius:20px; padding:10px; max-width:90%;" class="chat-message">
                 {formatted_text}
                 <div style="font-size:12px; color:#ccc; margin-top:5px;">{current_time}</div>
             </div>
@@ -66,7 +80,7 @@ def display_message(text, is_user=False, avatar_url=None):
     st.write(container_html, unsafe_allow_html=True)
 
 def normalize_text(text):
-    text = re.sub(r'(?<!\s)\n(?!\s)', ' ', text)
+    text = re.sub(r'\s*\n\s*', ' ', text)
     return text.lower().strip()
 
 # Load predefined responses from a config file
@@ -84,7 +98,6 @@ st.markdown(f"""
     <h1 style="margin:0;">Capellagence</h1>
 </div>
 """, unsafe_allow_html=True)
-
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -117,14 +130,13 @@ if question := st.chat_input("Ask a question"):
     normalized_question = normalize_text(question)
     response = None
     for key in responses:
-      if normalize_text(key) == normalized_question:
-          response = responses[key]
-          break
+        if normalize_text(key) == normalized_question:
+            response = responses[key]
+            break
     if response is None:
-      response = "I'm not sure how to respond to that."
+        response = "I'm not sure how to respond to that."
 
     # Calculate delay duration based on response length
-    # For example, 0.05 seconds per character
     delay_duration = len(response) * 0.005
     time.sleep(delay_duration)
 
