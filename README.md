@@ -12,4 +12,4 @@ Please clone the repository.
 
 - #### Run the application
 
-  `streamlit run chat_with_pdf.py`
+  `streamlit run main.py`
