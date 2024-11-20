@@ -27,6 +27,17 @@ st.markdown(f"""
 #MainMenu {{ visibility: hidden; }}
 footer {{ visibility: hidden; }}
 .stDeployButton {{ display: none; }}
+.stStopButton {{ display: none; }}
+            
+/* Hide Running and Stop buttons */
+.element-container:has(button[kind="secondaryFormSubmit"]) {{ display: none !important; }}
+.stStopButton {{ display: none !important; }}
+button[kind="stopButton"] {{ display: none !important; }}
+button[kind="runningButton"] {{ display: none !important; }}
+.stButton {{ display: none !important; }}
+.stSpinner {{ display: none !important; }}
+div[data-testid="stStatusWidget"] {{ display: none !important; }}
+.element-container div[data-testid="stMarkdownContainer"] > div:has(button) {{ display: none !important; }}
 
 /* Custom styling for chat messages */
 .chat-message {{
