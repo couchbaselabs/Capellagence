@@ -26,6 +26,7 @@ st.markdown(f"""
 /* Hide the Streamlit header and footer */
 #MainMenu {{ visibility: hidden; }}
 footer {{ visibility: hidden; }}
+.stDeployButton {{ display: none; }}
 
 /* Custom styling for chat messages */
 .chat-message {{
