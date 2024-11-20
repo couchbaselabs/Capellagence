@@ -43,6 +43,11 @@ footer {{ visibility: hidden; }}
     font-family: Arial, sans-serif !important;
     font-size: 14px !important;
 }}
+            
+p {{
+    font-family: Arial, sans-serif !important;
+    font-size: 14px !important;
+}}
 
 </style>
 """, unsafe_allow_html=True)
